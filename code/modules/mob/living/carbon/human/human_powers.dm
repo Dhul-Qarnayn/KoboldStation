@@ -628,7 +628,7 @@ mob/living/carbon/human/proc/change_monitor()
 /mob/living/carbon/human/proc/fire_spray()
 	set category = "Abilities"
 	set name = "Searing Burst"
-	set desc = "Spew a cone of magical flame in front of you"
+	set desc = "Spew a cone of magical flame in front of you."
 
 	if(last_special > world.time)
 		to_chat(src,"<span class='notice'>You are too tired to spray fire!</span>")
@@ -638,7 +638,7 @@ mob/living/carbon/human/proc/change_monitor()
 		to_chat(src,"<span class='notice'>You cannot spray fire in your current state.</span>")
 		return
 
-	last_special = world.time + 20
+	last_special = world.time + 20 SECONDS
 	playsound(loc, 'sound/species/shadow/grue_screech.ogg', 100, 1)
 	visible_message("<span class='danger'>\The [src] unleashes a torrent of raging flame!</span>",
 			"<span class='danger'>You unleash a gust of fire!</span>",
